@@ -18,11 +18,12 @@ lab8::~lab8()
 
 void lab8::on_pushButton_clicked()
 {
-    bool ok;
-    qint8 m = ui->lineEdit->text().toInt(&ok);
-    qint8 n = ui->lineEdit_2->text().toInt(&ok);
+    bool ok1;
+    bool ok2;
+    qint8 m = ui->lineEdit->text().toInt(&ok1);
+    qint8 n = ui->lineEdit_2->text().toInt(&ok2);
 
-    if(!ok)
+    if(!ok1 or !ok2)
     {
         QMessageBox::information(this,"Ошибка", "Введите число!"); return;
     }
@@ -47,20 +48,6 @@ void lab8::on_pushButton_clicked()
         }
         ui->textEdit->append(str);
     }
-
-//    matrix.clear();
-//    for (int i = 0; i < 5; i++) {
-//    QVector<int> vec;
-//    for (int j = 0; j <= i; j++) {
-//    vec.append(i*j); }
-//    matrix.append(vec); }
-//    strCount = 5;
-//    ui->textEdit->clear();
-//    for (int i = 0; i < matrix.length(); i++) {
-//    QString str = "";
-//    for (int j = 0; j < matrix[i].length(); j++) {
-//    str += QString::number(matrix[i][j])+" | "; }
-//    ui->textEdit->append(str);}
 }
 
 void lab8::on_pushButton_2_clicked()
